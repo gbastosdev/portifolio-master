@@ -1,12 +1,12 @@
-const express = require('express')
-const morgan = require('morgan')
+const mongoose = require('mongoose')
+const { MongoClient, ServerApiVersion } = require('mongodb');
+require('dotenv').config({path:'./config.env'})
+const app = require('./app')
 
-const app = express()
+const DB_LOCAL = process.env.DATABASE_LOCAL
+const DB = process.env.DATABASE.replace('<password>', process.env.DATABASE_PASSWORD)
 
-app.use(morgan())
-app.use(express.json())
-
-app.use((req,res,next)  =>{
-
-}) 
-
+const port = process.env.PORT || 3000
+app.listen(port, ()=>{
+    console.log(`App running on port ${port}...`)
+})
