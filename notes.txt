@@ -1,0 +1,6 @@
+$lt = menor que o valor inserido. E.G = {price: {$lt:500}}
+$lte = menor ou igual ao valor inserido. E.G = {price: {$lte:500}}
+$gt = maior que o valor inserido. E.G = {price: {$gt:500}}
+$gte = maior ou igual ao valor inserido. E.G = {price: {$gte:500}}
+
+OR condition = [{"first condition"}, {"second condition"}]

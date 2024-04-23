@@ -13,7 +13,7 @@ app.use((req,res,next)  =>{
     next()
 })
 
-app.use('/api/v1/portifolio', portifolioRouter)
+app.use('/portifolio', portifolioRouter)
 
 module.exports = app
 
