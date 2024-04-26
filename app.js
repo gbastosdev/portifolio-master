@@ -1,7 +1,7 @@
 const express = require('express')
 const morgan = require('morgan')
 
-const portifolioRouter = require('./routes/portifolioRoutes')
+const userRouter = require('./routes/userRouter')
 
 const app = express()
 
@@ -13,7 +13,7 @@ app.use((req,res,next)  =>{
     next()
 })
 
-app.use('/portifolio', portifolioRouter)
+app.use('/user', userRouter)
 
 module.exports = app
 
