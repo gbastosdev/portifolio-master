@@ -1,19 +1,4 @@
 const User = require('../models/userModel')
-/**
- * @swagger
- * /users:
- *   get:
- *     description: Returns a list of users
- *     responses:
- *       200:
- *         description: A list of users
- *         content:
- *           application/json:
- *             schema:
- *               type: array
- *               items:
- *                 $ref: '#/models/userModel'
- */
 exports.createUser = async (req, res) => {
 
     try {
