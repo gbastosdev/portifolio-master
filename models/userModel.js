@@ -23,15 +23,16 @@ const userSchema = new mongoose.Schema({
             link: String
         }],
         experience:[{
-            title: String,
-            started: Date,
-            finished: Date ,
+            companyName: String,
+            jobTitle: String,
+            startedAt: Date,
+            finishedAt: Date,
             description: String
         }],
         education: [{
-            title: String,
+            institution: String,
             started: Date,
-            finished: Date ,
+            finished: Date,
             complete: Boolean
         }],
         services: [{
