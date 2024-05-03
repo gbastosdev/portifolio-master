@@ -10,13 +10,17 @@ const userSchema = new mongoose.Schema({
         required: [true, 'O usuário necessita de um e-mail!'],
         unique: true
     }, 
+    createdAt: {
+        type: Date,
+        default: Date.now()
+    },
     portifolio: {
         intro:{
             title: String,
             description: String
         },
         projects:[{
-            image: String,
+            image: [String],
             title: String,
             description: String,
             skills: [String],
@@ -46,7 +50,7 @@ const userSchema = new mongoose.Schema({
             instagram: String,
             email: String,
             whatsapp: Number
-        }
+        },
     }
 })
 
